@@ -1,0 +1,28 @@
+@charset "utf-8";
+@import "varibles";
+@import "maxin";
+//高内聚 低耦合
+//解耦和度
+.FRBL {
+  .f_right();
+  .b_left();
+}
+
+
+@col: 12;
+@pad: 30px;
+
+/*运算*/
+.col-xs-1 {
+  width: 100%/@col;
+  padding: 0 @pad/2;
+  color: red/2;
+}
+
+/*内置函数*/
+.col-xs-4 {
+  width: 100%/3;
+  padding: 0 @pad/2;
+  color: lighten(red, 10%);
+}
+

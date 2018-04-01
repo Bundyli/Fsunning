@@ -1,0 +1,34 @@
+@charset "utf-8";
+/*1.这样的注释 在对应的css中是可以编译的*/
+/*1.样式类名 maxin*/
+/*2.函数 maxin*/
+/*定义一个可以传参的方法*/
+.FLBL {
+  float: left;
+  border-left: 1px solid #ccc;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.FRBR {
+  float: right;
+  border-right: 1px solid #ccc;
+}
+.FRBL {
+  float: right;
+  border-left: 1px solid #ccc;
+}
+/*运算*/
+.col-xs-1 {
+  width: 8.33333333%;
+  padding: 0 15px;
+  color: #800000;
+}
+/*内置函数*/
+.col-xs-4 {
+  width: 33.33333333%;
+  padding: 0 15px;
+  color: #ff3333;
+}

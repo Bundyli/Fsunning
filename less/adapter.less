@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+/*适配方案*/
+//适配主流设备
+// 640px  750px 设计稿
+//需要对应的基准值
+//750px设计稿 假设100px
+//在psd量取的尺寸px 通过基准值100px来做适配转成rem
+//设备尺寸 非750px 如320px 360px 375px 384px 414px 424px 480px 540px 640px 720px 750px
+//每一种设备都有对应的font-size大小
+
+
+//@media (min-width: 750px) {
+//  html {
+//    font-size: 100px;
+//  }
+//}
+//
+//@media (min-width: 720px) {
+//  html {
+//    font-size: 720/750*100px;
+//  }
+//}
+//
+//@media (min-width: 640px) {
+//  html {
+//    font-size: 640/750*100px;
+//  }
+//}
+//。。。
+
+//adapter
+//设计稿宽度
+//@psdWidth:750;
+//基准值
+//@baseSize:100;
+//需要适配的所有设备 数组
+//@deviceWidthList:320px,360px,375px,384px,414px,424px,480px,540px,640px,720px,750px;
+
+//adapter maxin
+//.adapterFuc(@deviceWidth:750px) {
+//  @media (min-width: @deviceWidth) {
+//    html {
+//      font-size: @deviceWidth/@psdWidth*@baseSize;
+//    }
+//  }
+//}
+//.adapterFuc();
+
+//body {
+  //length(@deviceWidthList) 获取数组的长度
+  //extract(@deviceWidthList,1) 获取序号为几的值
+  //height: length(@deviceWidthList);
+  //width: extract(@deviceWidthList,1);
+//}
+
+
+//通过@index索引（数组序号）来取值 when (@index) 满足条件 当前序号小鱼数组的长度
+//.adapterFuc(@index) when (@index <= length(@deviceWidthList)) {
+//    @media (min-width: extract(@deviceWidthList,@index)) {
+//      html {
+//        font-size: extract(@deviceWidthList,@index)/@psdWidth*@baseSize;
+//      }
+//    }
+//自调用 死循环
+//  .adapterFuc(@index+1);
+//}
+
+.adapterFuc(1);

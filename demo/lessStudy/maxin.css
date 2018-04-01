@@ -1,0 +1,17 @@
+@charset "utf-8";
+/*1.样式类名 maxin*/
+/*2.函数 maxin*/
+/*定义一个可以传参的方法*/
+.FLBL {
+  float: left;
+  border-left: 1px solid #ccc;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.FRBR {
+  float: right;
+  border-right: 1px solid #ccc;
+}

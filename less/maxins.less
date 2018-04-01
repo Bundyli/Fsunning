@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+//通过@index索引（数组序号）来取值 when (@index) 满足条件 当前序号小鱼数组的长度
+.adapterFuc(@index) when (@index <= length(@deviceWidthList)) {
+  @media (min-width: extract(@deviceWidthList,@index)) {
+    html {
+      font-size: extract(@deviceWidthList,@index)/@psdWidth*@baseSize;
+    }
+  }
+  //自调用 死循环
+  .adapterFuc(@index+1);
+}

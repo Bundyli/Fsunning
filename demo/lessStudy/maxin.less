@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+/*1.样式类名 maxin*/
+//需求：组合样式 左浮动 有浮动 宽度50% 左边框 有边框 下边框
+//.f_left {
+//  float: left;
+//}
+//.f_right {
+//  float: right;
+//}
+//.b_left {
+//  border-left: 1px solid #ccc;
+//}
+//.b_right {
+//  border-right: 1px solid #ccc;
+//}
+//需求：左浮动 左边框
+//通过 左浮动 左边框 混入到了FLBL
+//.FLBL {
+//  .f_left();
+//  .b_left();
+//}
+
+/*2.函数 maxin*/
+//JS var a = function(){}  function(name){}
+//类名后加括号
+.f_left() {
+  float: left;
+}
+.f_right() {
+  float: right;
+}
+.b_left() {
+  border-left: 1px solid #ccc;
+}
+.b_right() {
+  border-right: 1px solid #ccc;
+}
+/*定义一个可以传参的方法*/
+//@direction定义参数 但是必须有默认值
+//使用变量名称 拼接border-@{direction}
+//拼接变量的时候 @{direction}
+.border(@direction:left) {
+  border-@{direction}: 1px solid #ccc;
+}
+
+//圆角方法
+.borderRadius(@width: 10px) {
+  border-radius: @width;
+  -webkit-border-radius: @width;
+  -moz-border-radius: @width;
+  -ms-border-radius: @width;
+  -o-border-radius: @width;
+}
+.FLBL {
+  .f_left();
+  .border();
+  .borderRadius(20px);
+}
+.FRBR {
+  .f_right();
+  .border(right);
+}
+
